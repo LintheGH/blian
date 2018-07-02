@@ -1,0 +1,5 @@
+﻿.mask{position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,0.2);}
+.mask>i{position:fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 40px; color:#025c90;}
+
+.item-hidden{display:none;}
+.tr-selected>td{background-color: #0094ff!important; color: #fff!important;}

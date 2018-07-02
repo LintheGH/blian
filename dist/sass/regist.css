@@ -1,0 +1,103 @@
+body {
+  background-color: #F9F9F8; }
+
+div.container {
+  width: 950px;
+  min-width: 950px;
+  margin: 0 auto; }
+
+#top .container {
+  height: 110px;
+  box-sizing: border-box; }
+
+#top .wrap {
+  height: 57px;
+  margin-top: 29px; }
+
+.wrap h1, .wrap div, .wrap img {
+  height: 100%; }
+
+#main .container {
+  border: 1px solid #ccc;
+  background: #fff; }
+
+.welcome {
+  height: 50px;
+  border-bottom: 1px solid #ccc; }
+  .welcome .left {
+    height: 50px;
+    line-height: 50px;
+    margin-left: 20px;
+    color: red; }
+  .welcome .right {
+    height: 50px;
+    line-height: 50px;
+    margin-right: 20px; }
+    .welcome .right a {
+      color: red; }
+
+.regist-main .wrap {
+  height: 36px;
+  margin-top: 20px; }
+
+.regist-main label {
+  display: inline-block;
+  width: 321px;
+  text-align: right; }
+
+.regist-main span {
+  color: red; }
+
+.regist-main input {
+  box-sizing: border-box;
+  width: 300px;
+  height: 36px;
+  border: 1px solid #ccc; }
+
+.regist-main .treaty-label {
+  width: 302px;
+  color: #fff; }
+
+.treaty {
+  display: inline-block;
+  width: 300px;
+  height: 36px;
+  text-align: left; }
+  .treaty label {
+    width: 100%;
+    height: 100%; }
+  .treaty input {
+    width: 13px;
+    height: 13px;
+    margin-right: 24px; }
+  .treaty a {
+    color: red; }
+
+.wrap:first-child {
+  margin-top: 60px; }
+
+.wrap:last-child {
+  margin-top: 0;
+  margin-bottom: 74px; }
+
+.wrap:nth-last-child(3) input {
+  width: 200px; }
+
+.wrap:nth-last-child(4) input {
+  width: 200px; }
+
+#main .code-btn {
+  width: 90px;
+  height: 100%;
+  border: 1px solid #ccc; }
+
+.random-code {
+  display: inline-block;
+  width: 90px;
+  height: 36px;
+  vertical-align: middle; }
+
+#regist-btn {
+  background: #E6133C;
+  color: #fff;
+  border-radius: 2px; }
