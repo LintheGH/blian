@@ -9,7 +9,6 @@ ul, ol {
   list-style: none; }
 
 img {
-  display: block;
   border: 0; }
 
 input {
@@ -42,8 +41,11 @@ i {
 .fr {
   float: right; }
 
-.hide {
-  display: none; }
+.zl-hide {
+  display: none !important; }
+
+.zl-show {
+  display: block !important; }
 
 .f12 {
   font-size: 12px; }

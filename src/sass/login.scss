@@ -1,4 +1,5 @@
 
+@import 'footer';
 html,body{height: 100%;}
 div.container{width: 950px;min-width: 950px;margin:0 auto;}
 #top{
@@ -53,3 +54,4 @@ div.container{width: 950px;min-width: 950px;margin:0 auto;}
 
 }
 
+#bottom{padding-top:0;}

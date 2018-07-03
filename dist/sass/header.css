@@ -36,12 +36,13 @@
     display: none;
     position: absolute;
     left: 0;
-    top: 40px;
+    top: 32px;
     width: 308px;
     height: 78px;
     border: 1px solid #ccc;
     box-shadow: 0 0 2px #cccc;
-    overflow: hidden; }
+    overflow: hidden;
+    background: #fff; }
   .top_nav_sites li {
     float: left;
     width: 134px;
@@ -97,7 +98,7 @@
   display: none;
   padding: 15px;
   left: -607px;
-  top: 40px; }
+  top: 32px; }
 
 .pay-dl {
   width: 660px;
@@ -134,7 +135,7 @@
 .palm {
   display: none;
   width: 310px;
-  top: 40px;
+  top: 32px;
   left: -225px;
   border: 1px solid #e2e2e2;
   overflow: hidden; }
@@ -268,7 +269,7 @@
   margin-top: 14px; }
 
 .all-list li:hover {
-  background: #555; }
+  background: #aaa; }
 
 .all-list a:hover {
   text-decoration: underline; }

@@ -10,7 +10,7 @@
 }
 .top_nav_sites{width: 98px;position:relative;display:inline-block;
     i{padding:0 8px;}
-    ul{display:none;position:absolute;left:0;top:40px;width: 308px;height: 78px;border:1px solid #ccc;box-shadow:0 0 2px #cccc;overflow:hidden;}
+    ul{display:none;position:absolute;left:0;top:32px;width: 308px;height: 78px;border:1px solid #ccc;box-shadow:0 0 2px #cccc;overflow:hidden;background: #fff;}
     li{float:left;width: 134px;height: 14px;line-height: 14px;margin:16px 0;}
     li:nth-child(2n-1){margin-left:35px;margin-right:5px;}
     li:nth-child(1),li:nth-child(2){margin-bottom:0;}
@@ -34,7 +34,7 @@
 .payment{position:relative;}
 .payment:hover .pay{display:block;}
 .divshow{position: absolute;background-color: #fff;border: 1px solid #e2e2e2;box-shadow: 0 0 2px #CCC;top: 30px;}
-.pay{display:none;padding: 15px;left: -607px;top:40px;}
+.pay{display:none;padding: 15px;left: -607px;top:32px;}
 .pay-dl{width: 660px;overflow: hidden;font-size:12px;
     dd{float: left;width: 100px;padding: 0 5px;margin-left: -1px;border-left: 1px dashed #e9e9e9;height: 135px;}
     .pay-title{line-height: 26px;height: 30px;font-weight: 700;font-size: 14px;color: #333;padding: 0 10px;}
@@ -44,7 +44,7 @@
 
 .mobile{position:relative;}
 .mobile:hover .palm{display:block;}
-.palm{display:none;width: 310px;top:40px;left:-225px;border: 1px solid #e2e2e2;overflow: hidden;}
+.palm{display:none;width: 310px;top:32px;left:-225px;border: 1px solid #e2e2e2;overflow: hidden;}
 .palm-item{float: left;margin-left: 8px;width: 141px;text-align: center;padding: 20px 0 4px;
     img{display:inline-block;line-height: 0;height: 100px;}
 }
@@ -129,7 +129,7 @@
     a{margin:0;font-weight:normal;}
     li{height: 29px;opacity:0.8;}
     li:first-child{margin-top:14px;}
-    li:hover{background: #555;}
+    li:hover{background: #aaa;}
     a:hover{text-decoration: underline;}
 }
 .jinkou i{background-position:0 0;vertical-align: middle;}
