@@ -36,12 +36,13 @@
     display: none;
     position: absolute;
     left: 0;
-    top: 40px;
+    top: 32px;
     width: 308px;
     height: 78px;
     border: 1px solid #ccc;
     box-shadow: 0 0 2px #cccc;
-    overflow: hidden; }
+    overflow: hidden;
+    background: #fff; }
   .top_nav_sites li {
     float: left;
     width: 134px;
@@ -97,7 +98,7 @@
   display: none;
   padding: 15px;
   left: -607px;
-  top: 40px; }
+  top: 32px; }
 
 .pay-dl {
   width: 660px;
@@ -134,7 +135,7 @@
 .palm {
   display: none;
   width: 310px;
-  top: 40px;
+  top: 32px;
   left: -225px;
   border: 1px solid #e2e2e2;
   overflow: hidden; }
@@ -389,6 +390,311 @@
 .item-list li:hover a {
   color: red; }
 
+#bottom {
+  height: 345px;
+  margin-top: 30px;
+  background: #F3F3F3;
+  padding-top: 24px; }
+
+.helpnav-item {
+  width: 238px;
+  height: 190px;
+  text-align: center; }
+  .helpnav-item li {
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px; }
+    .helpnav-item li a {
+      color: #555555; }
+
+.helpnav-title {
+  height: 40px;
+  line-height: 40px;
+  margin-left: -40px;
+  font-size: 16px; }
+  .helpnav-title i {
+    display: "inline-block";
+    height: 40px;
+    width: 40px;
+    background: url("../img/help-nav.png") no-repeat;
+    vertical-align: middle; }
+  .helpnav-title .footic2 {
+    background-position: 0 -40px; }
+  .helpnav-title .footic3 {
+    background-position: 0 -80px; }
+  .helpnav-title .footic4 {
+    background-position: 0 -120px; }
+  .helpnav-title .footic5 {
+    background-position: 0 -160px; }
+
+.licenses {
+  padding-top: 25px;
+  margin-top: 30px; }
+  .licenses div {
+    margin-top: 2px; }
+  .licenses span {
+    display: "inline-block";
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    padding: 0 10px;
+    border-right: 1px solid #ccc; }
+
+.license span {
+  color: #999999; }
+
+.license2 span {
+  border-right: 0 none; }
+
+.license2 a {
+  color: #666666; }
+
+.license3 span {
+  border-right: 0 none; }
+
+.license3 a {
+  color: #999999; }
+
+.license3 img {
+  display: "inline-block";
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+  margin-right: 3px; }
+
 #banner {
   height: 430px;
   background: pink; }
+
+.news {
+  margin-top: 20px;
+  width: 100%;
+  height: 248px;
+  border: 1px solid #ccc; }
+
+.news-main-pic {
+  display: "inline-block";
+  width: 224px;
+  height: 100%;
+  overflow: hidden; }
+
+.news-banner {
+  display: "inline-block";
+  width: 960px;
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
+
+.b-lists {
+  height: 100%; }
+  .b-lists li {
+    float: left;
+    width: 160px;
+    border-right: 1px dashed #ccc;
+    padding: 5px; }
+  .b-lists li:last-child {
+    border-right: 0; }
+
+.arrowl {
+  text-align: center;
+  opacity: .8;
+  width: 18px;
+  height: 50px;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: #999;
+  line-height: 50px; }
+
+.arrowr {
+  text-align: center;
+  opacity: .8;
+  width: 18px;
+  height: 50px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: #999;
+  line-height: 50px; }
+
+.item-img {
+  height: 158px; }
+  .item-img img {
+    height: 100%; }
+
+.item-title {
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 12px;
+  padding: 4px 0; }
+
+.item-title:hover a {
+  text-decoration: underline; }
+
+.n-price {
+  color: #FF6F85;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px; }
+
+.rp {
+  line-height: 24px;
+  font-size: 11px;
+  color: #D2C1BB; }
+
+.advs {
+  height: 370px;
+  width: 100%;
+  margin-top: 20px; }
+
+.adv-banner {
+  width: 304px;
+  height: 100%;
+  display: "inline-block";
+  overflow: hidden;
+  background: #ccc; }
+
+.adv-lists {
+  width: 880px;
+  height: 100%;
+  display: "inline-block"; }
+  .adv-lists li {
+    width: 283px;
+    height: 180px;
+    margin-left: 10px;
+    float: left;
+    background: pink; }
+  .adv-lists li:nth-child(4) {
+    margin-top: 10px; }
+  .adv-lists li:nth-child(5) {
+    margin-top: 10px; }
+  .adv-lists li:nth-child(6) {
+    margin-top: 10px; }
+
+.adv-type {
+  height: 516px;
+  margin-top: 20px;
+  box-sizing: border-box; }
+  .adv-type h2 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 26px;
+    font-weight: bold; }
+
+.adv-type-banner {
+  width: 306px;
+  height: 466px;
+  overflow: hidden;
+  background: yellow;
+  box-sizing: border-box; }
+
+.adv-type-lists {
+  width: 884px;
+  height: 466px;
+  box-sizing: border-box; }
+
+.type-lists-t {
+  height: 402px;
+  width: 884px;
+  background: pink;
+  box-sizing: border-box; }
+  .type-lists-t li {
+    width: 220px;
+    height: 100%;
+    float: left; }
+
+.item-t {
+  width: 100%;
+  height: 304px;
+  border-top: 1px solid #ccc;
+  border-right: 1px dashed #ccc;
+  background: red;
+  box-sizing: border-box; }
+
+.item-b {
+  width: 100%;
+  height: 98px;
+  border: 1px dashed #ccc;
+  border-left: 0 none;
+  background: #aaa;
+  box-sizing: border-box; }
+
+.type-lists-b {
+  width: 884px;
+  height: 64px;
+  background: black;
+  box-sizing: border-box; }
+
+.guess {
+  margin-top: 30px; }
+
+.showlogin {
+  border-top: 1px solid #ccc;
+  height: 55px;
+  line-height: 55px;
+  font-size: 14px;
+  position: relative;
+  text-align: right; }
+  .showlogin a {
+    color: red; }
+
+.guess-title {
+  width: 320px;
+  height: 24px;
+  padding: 0 30px;
+  font-size: 24px;
+  line-height: 24px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: -12px;
+  text-align: center;
+  transform: translate(-50%, 0); }
+  .guess-title span {
+    font-size: 16px;
+    color: #B29999; }
+  .guess-title i {
+    color: red; }
+
+.guess-lists li {
+  box-sizing: border-box;
+  width: 230px;
+  height: 320px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  float: left; }
+
+.guess-lists li:nth-child(5n) {
+  margin-right: 0; }
+
+.g-item-img {
+  width: 218px;
+  height: 220px; }
+
+.g-item-title {
+  width: 218px;
+  height: 40px;
+  margin-top: 12px;
+  color: #666666; }
+
+.g-item-main {
+  width: 218px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px; }
+  .g-item-main .price {
+    color: red;
+    font-weight: bold; }
+
+.collect a {
+  font-size: 14px;
+  line-height: 14px;
+  color: #999999;
+  display: "inline-block";
+  padding: 5px;
+  border: 1px solid #999;
+  border-radius: 13px; }
