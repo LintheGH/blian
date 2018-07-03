@@ -7,7 +7,6 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "amd-optimize": "^0.6.1",
     "gulp": "^3.9.1",
@@ -19,5 +18,14 @@
     "gulp-rename": "^1.3.0",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LintheGH/exam1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LintheGH/exam1/issues"
+  },
+  "homepage": "https://github.com/LintheGH/exam1#readme",
+  "description": ""
 }
