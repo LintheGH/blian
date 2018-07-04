@@ -5,7 +5,7 @@
         $servername = 'localhost';
         $username = 'root';
         $password = 'root';
-        $database = '1000phone';
+        $database = 'userdata';
 
         //连接数据库
         $conn = new mysqli($servername,$username,$password,$database);
@@ -15,7 +15,7 @@
             die('连接失败'.$conn->connect_error);
         }
 
-        $conn->set_charset('utf8');
+        // $conn->set_charset('utf8');
         return $conn;
     }
 
@@ -23,9 +23,11 @@
     function query_oop($sql){
         $conn = connect_oop();
         $result = $conn->query($sql);
+        $dataset = array();
+        $dataset = $result->fetch_all(MYSQLI_ASSOC);
         $result->free();//释放内存
         $conn->close();//关闭连接
-        return $result;
+        return $dataset;
     }
 
     function excute_oop($sql){
@@ -35,23 +37,23 @@
         return $result;
     }
 
-    function multi_query_oop($sql){
-        $jsonData = array();
-        $conn = connect_oop();
-        $conn->multi_query($sqls)
-        while($mysqli->next_result()){
-            $data = $conn->store_result();   //获取结果集  
-            $jsonData[] = $data;
-        }
-        $conn->close();//关闭连接
-    }
+    // function multi_query_oop($sql){
+    //     $jsonData = array();
+    //     $conn = connect_oop();
+    //     $conn->multi_query($sqls)
+    //     while($mysqli->next_result()){
+    //         $data = $conn->store_result();   //获取结果集  
+    //         $jsonData[] = $data;
+    //     }
+    //     $conn->close();//关闭连接
+    // }
 
     //初始化连接对象方法
     function connect(){
         $servername = "localhost";//
         $username = "root";
         $password = "root";
-        $dbname = '1000phone'; 
+        $dbname = 'userdata'; 
         //初始化连接，返回一个连接对象(包含所连接数据库的信息)
         $con = mysqli_connect($servername,$username,$password,$dbname); 
 

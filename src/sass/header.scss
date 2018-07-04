@@ -119,12 +119,13 @@
 .all-item{height: 35px;width: 190px;line-height: 35px;background: #151515;color:#fff;text-align:left;position:relative;
     a{color:#fff;margin-left:24px;}
     i{margin-right:20px;}
-    ul{width: 190px;height: 430px;position:absolute;background:rgba(21,21,21,0.7);left:0;bottom:-430px;
-       
+    ul{width: 190px;height: 430px;position:absolute;background:rgba(21,21,21,0.7);left:0;bottom:-432px;
+        z-index:1000;
     }
 }
 
 .all-list{
+    
     i{margin-left:22px;display:inline-block;width: 16px;height: 16px;background: url('../img/nav-v3-icon-1.png') no-repeat;}
     a{margin:0;font-weight:normal;}
     li{height: 29px;opacity:0.8;}
@@ -154,8 +155,8 @@
     background: #fff;
     position:absolute;
     left:190px;
-    bottom:0;
-    box-shadow:0 0 2px #ccc;
+    bottom:-432px;
+    transition:all .3;
     display:none;
 }
 #nav .list-detail{opacity:1;}

@@ -12,6 +12,7 @@ div.container{width: 950px;min-width: 950px;margin:0 auto;}
 .wrap{
     h1,div,img{height: 100%;}
 }
+
 #main{
     
     .container{
@@ -50,12 +51,52 @@ div.container{width: 950px;min-width: 950px;margin:0 auto;}
     }
     input{
         box-sizing: border-box;
-        width: 300px;
-        height: 36px;
-        border:1px solid #ccc;
+
+        border:0;
     }
     .treaty-label{width: 302px;color:#fff;}
     
+}
+.input-wrap{
+    display:inline-block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 36px;
+    border:1px solid #ccc;
+    position:relative;
+    input{width: 260px;height: 100%;}
+    i{height: 30px;width: 30px;line-height: 30px;text-align:center;color:#aaa;}
+    span{
+        display:inline-block;
+        position:absolute;
+
+        font-size:12px;
+        color:black;
+        display:none;
+    }
+}
+.username .showinfo{right:-100px;top:0;i{color:blue;}}
+.username .showerror{right:-100px;top:0;i{color:red;}}
+.username .showerror2{right:-100px;top:0;i{color:red;}}
+.pwd .showinfo{right:-88px;top:0;i{color:blue;}}
+.pwd .showerror{right:-150px;top:0;i{color:red;}}
+
+.pwd2 .showinfo{right:-114px;top:0;i{color:blue;}}
+.pwd2 .showerror{right:-90px;top:0;i{color:red;}}
+
+.phone .showinfo{right:-102px;top:0;i{color:blue;}}
+.phone .showerror{right:-126px;top:0;i{color:red;}}
+
+.msgcode .showinfo{right:-228px;top:0;i{color:blue;}}
+.msgcode .showerror{right:-228px;top:0;i{color:red;}}
+
+.pic-randomcode{
+    width: 200px;
+    input{width: 160px;}
+}
+.msgcode{
+    width: 200px;
+    input{width: 160px;}
 }
 .treaty{
     display:inline-block;
@@ -75,21 +116,18 @@ div.container{width: 950px;min-width: 950px;margin:0 auto;}
 .wrap:first-child{
     margin-top:60px;
 }
-.wrap:last-child{
+.regist-main .wrap:last-child{
+    label{height: 21px;}
     margin-top:0;
     margin-bottom:74px;
     
 }
-.wrap:nth-last-child(3){
-    input{width: 200px;}
-} 
-.wrap:nth-last-child(4){
-    input{width: 200px;}
-    
-}
+
 #main .code-btn{width: 90px;height: 100%;border:1px solid #ccc;}
 .random-code{display:inline-block;width: 90px;height: 36px;vertical-align: middle;}
-#regist-btn{background: #E6133C;color:#fff;border-radius: 2px;}
+#regist-btn{background: #E6133C;color:#fff;border-radius: 2px;width: 300px;height: 36px;}
 
 
 #bottom{padding-top:0;}
+
+

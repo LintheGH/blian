@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../dist/sass/regist.min.css">
     <link rel="stylesheet" href="../../dist/sass/common.min.css">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../lib/require.js" data-main="../js/regist.js"></script>
     <title>欢迎注册</title>
 </head>
 <body>
@@ -22,41 +24,72 @@
             <div class="container">
                 <div class="welcome">
                     <div class="left fl">您好，感谢您加入i百联</div>
-                    <div class="right fr">如有帐号，请点击<a href="#">登录</a></div>
+                    <div class="right fr">如有帐号，请点击<a href="./login.html">登录</a></div>
                 </div>
                 <div class="regist-main">
                     <div class="wrap">
                         <label for=""><span>*</span>用户名：</label>
-                        <input type="text">
+                        <div class="input-wrap username">
+                            <i class="fa fa-user"></i>
+                            <input type="text" name="username" id="username">
+                            <span class="showinfo"><i class="fa fa-info-circle"></i>请输入用户名</span>
+                            <span class="showerror"><i class="fa fa-times-circle"></i>请输入用户名</span>
+                            <span class="showerror2"><i class="fa fa-times-circle"></i>用户名已存在</span>
+                        </div>
                     </div>
                     <div class="wrap">
                             <label for=""><span>*</span>登录密码：</label>
-                            <input type="text">
+                            <div class="input-wrap pwd">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" name="pwd" id="pwd">
+                                <span class="showinfo"><i class="fa fa-info-circle"></i>请输入密码</span>
+                                <span class="showerror"><i class="fa fa-times-circle"></i>密码必须是8-20位字符</span>
+                            </div>
                     </div>
                     <div class="wrap">
                             <label for=""><span>*</span>确认密码：</label>
-                            <input type="text">
+                            <div class="input-wrap pwd2">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" name="pwd2" id="pwd2">
+                                <span class="showinfo"><i class="fa fa-info-circle"></i>请输入确认密码</span>
+                                <span class="showerror"><i class="fa fa-times-circle"></i>密码不一致</span>
+                            </div>
                     </div>
                     <div class="wrap">
                             <label for=""><span>*</span>手机号：</label>
-                            <input type="text">
+                            <div class="input-wrap phone">
+                                <i class="fa fa-mobile-phone"></i>
+                                <input type="text" name="phone" id="phone">
+                                <span class="showinfo"><i class="fa fa-info-circle"></i>请输入手机号</span>
+                                <span class="showerror"><i class="fa fa-times-circle"></i>请输入正确手机号</span>
+                            </div>
                     </div>
                     <div class="wrap">
                         <label for=""><span>*</span>验证码：</label>
-                        <input type="text">
+                        <div class="input-wrap pic-randomcode">
+                            <i class="fa fa-mobile-phone"></i>
+                            <input type="text" name="pic-randomcode" id="pic-randomcode">
+                            <span class="showinfo"></span>
+                            <span class="showerror"></span>
+                        </div>
                         <div class="random-code"></div>
                         <a href="#">换一换</a>
                     </div>
                     <div class="wrap">
                         <label for=""><span>*</span>短信验证码：</label>
-                        <input type="text">
+                        <div class="input-wrap msgcode">
+                            <i class="fa fa-mobile-phone"></i>
+                            <input type="text" name="msgcode" id="msgcode">
+                            <span class="showinfo"><i class="fa fa-info-circle"></i>请输入短信验证码</span>
+                            <span class="showerror"><i class="fa fa-times-circle"></i>短信验证码不正确</span>
+                        </div>
                         <input type="button" value="获取验证码" class="code-btn">
                     </div>
                     <div class="wrap">
                         <label for="" class="treaty-label">协议</label>
                         <div class="treaty">
                             <label for="">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" checked required>
                                 我已阅读并同意<a href="#">《百联会员协议》</a>
                             </label>
                         </div>

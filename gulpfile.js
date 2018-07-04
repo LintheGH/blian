@@ -82,7 +82,7 @@ gulp.task('img',function(){
 gulp.task('watch', function () {
     gulp.watch('src/*.html', ['html']);
 
-    gulp.watch('src/js/*.js', ['rjs']);
+    // gulp.watch('src/js/*.js', ['rjs']);
 
     gulp.watch('src/sass/*.scss', ['sass']);
 
@@ -94,6 +94,6 @@ gulp.task('watch', function () {
 
 
 //定义默认任务
-gulp.task('default', ['html', 'sass','watch','rjs','minhtml','img']);
+gulp.task('default', ['html', 'sass','watch','minhtml','img']);
 
 
