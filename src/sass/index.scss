@@ -5,9 +5,61 @@ $m2:20px;
 
 #banner{
     height: 430px;
-    background: pink;
-    .container{}
+    position:relative;
 }
+
+.top-roll{
+    width: 100%;
+    height: 430px;
+    position:relative;
+    li{
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        left:0;
+        top:0;
+        // z-index:-1000;
+        opacity:0;
+        transition:all 1s;
+    }
+    a{
+        display:block;
+        width: 810px;
+        height: 100%;
+        margin:0 auto;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    .tr-idx01{background: #E8F3F5;opacity:1;}
+    .tr-idx02{background: #FFE2E4;}
+    .tr-idx03{background: #FFE2E4;}
+    .tr-idx04{background: #66F9FD;}
+    .tr-idx05{background: #85D4F3;}
+    .tr-idx06{background: #69CFDA;}
+}
+
+
+.tr-idx{
+    display:inline-block;
+    position:absolute;
+    left:50%;
+    bottom:10px;
+    transform:translate(-50%,0);
+    li{
+        display:inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #000;
+        margin-right:8px;
+    }
+    .tr-idx01{box-shadow: 0 0 0 4px #ccc;}
+}
+
+
+
 #main{
     .container{}
 }
@@ -17,14 +69,18 @@ $m2:20px;
     height: 248px;border:1px solid #ccc;
     }
 .news-main-pic{display:$ib;width: 224px;height: 100%;overflow:hidden;}
-.news-banner{display:$ib;width: 960px;height: 100%;position:relative;overflow:hidden;}
+.news-banner{display:$ib;width: 960px;height: 100%;position:relative;overflow:hidden;
+    a{display:inline-block;width: 100%;height: 100%;}
+}
 .b-lists{
     height: 100%;
+    width: 1920px;
+    transition:all 1s;
     li{float:left;width: 160px;border-right:1px dashed #ccc;padding:5px;}
     li:last-child{border-right:0;}
 }
 .arrowl{text-align:center;opacity:.8;width: 18px;height: 50px;position:absolute;left:5px;top:50%;transform:translate(0,-50%);background: #999;line-height: 50px;}
-.arrowr{text-align:center;opacity:.8;width: 18px;height: 50px;position:absolute;right:5px;top:50%;transform:translate(0,-50%);background: #999;line-height: 50px;}
+.arrowr{display:none;text-align:center;opacity:.8;width: 18px;height: 50px;position:absolute;right:5px;top:50%;transform:translate(0,-50%);background: #999;line-height: 50px;}
 
 .item-img{height: 158px;
     img{height: 100%;}

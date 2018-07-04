@@ -122,13 +122,110 @@ div.container {
 
 .regist-main input {
   box-sizing: border-box;
-  width: 300px;
-  height: 36px;
-  border: 1px solid #ccc; }
+  border: 0; }
 
 .regist-main .treaty-label {
   width: 302px;
   color: #fff; }
+
+.input-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 300px;
+  height: 36px;
+  border: 1px solid #ccc;
+  position: relative; }
+  .input-wrap input {
+    width: 260px;
+    height: 100%; }
+  .input-wrap i {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #aaa; }
+  .input-wrap span {
+    display: inline-block;
+    position: absolute;
+    font-size: 12px;
+    color: black;
+    display: none; }
+
+.username .showinfo {
+  right: -100px;
+  top: 0; }
+  .username .showinfo i {
+    color: blue; }
+
+.username .showerror {
+  right: -100px;
+  top: 0; }
+  .username .showerror i {
+    color: red; }
+
+.username .showerror2 {
+  right: -100px;
+  top: 0; }
+  .username .showerror2 i {
+    color: red; }
+
+.pwd .showinfo {
+  right: -88px;
+  top: 0; }
+  .pwd .showinfo i {
+    color: blue; }
+
+.pwd .showerror {
+  right: -150px;
+  top: 0; }
+  .pwd .showerror i {
+    color: red; }
+
+.pwd2 .showinfo {
+  right: -114px;
+  top: 0; }
+  .pwd2 .showinfo i {
+    color: blue; }
+
+.pwd2 .showerror {
+  right: -90px;
+  top: 0; }
+  .pwd2 .showerror i {
+    color: red; }
+
+.phone .showinfo {
+  right: -102px;
+  top: 0; }
+  .phone .showinfo i {
+    color: blue; }
+
+.phone .showerror {
+  right: -126px;
+  top: 0; }
+  .phone .showerror i {
+    color: red; }
+
+.msgcode .showinfo {
+  right: -228px;
+  top: 0; }
+  .msgcode .showinfo i {
+    color: blue; }
+
+.msgcode .showerror {
+  right: -228px;
+  top: 0; }
+  .msgcode .showerror i {
+    color: red; }
+
+.pic-randomcode {
+  width: 200px; }
+  .pic-randomcode input {
+    width: 160px; }
+
+.msgcode {
+  width: 200px; }
+  .msgcode input {
+    width: 160px; }
 
 .treaty {
   display: inline-block;
@@ -148,15 +245,11 @@ div.container {
 .wrap:first-child {
   margin-top: 60px; }
 
-.wrap:last-child {
+.regist-main .wrap:last-child {
   margin-top: 0;
   margin-bottom: 74px; }
-
-.wrap:nth-last-child(3) input {
-  width: 200px; }
-
-.wrap:nth-last-child(4) input {
-  width: 200px; }
+  .regist-main .wrap:last-child label {
+    height: 21px; }
 
 #main .code-btn {
   width: 90px;
@@ -172,7 +265,9 @@ div.container {
 #regist-btn {
   background: #E6133C;
   color: #fff;
-  border-radius: 2px; }
+  border-radius: 2px;
+  width: 300px;
+  height: 36px; }
 
 #bottom {
   padding-top: 0; }

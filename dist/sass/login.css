@@ -158,20 +158,46 @@ div.container {
   margin: 0 auto; }
   .title a {
     color: blue;
-    font-siz: 12px;
+    font-size: 12px;
     font-size: 14px; }
 
-#username {
+.username {
   width: 300px;
   height: 33px;
+  margin: 0 auto;
   margin-top: 40px;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  text-align: left; }
+  .username i {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #aaa; }
+
+#username {
+  width: 265px;
+  height: 100%;
+  border: 0; }
+
+.pwd {
+  width: 300px;
+  height: 33px;
+  margin: 0 auto;
+  margin-top: 40px;
+  border: 1px solid #ccc;
+  text-align: left; }
+  .pwd i {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #aaa; }
 
 #pwd {
-  width: 300px;
-  height: 33px;
-  margin-top: 20px;
-  border: 1px solid #ccc; }
+  width: 265px;
+  height: 100%;
+  border: 0; }
 
 #login-btn {
   width: 300px;

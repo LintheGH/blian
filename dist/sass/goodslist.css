@@ -248,7 +248,8 @@
     position: absolute;
     background: rgba(21, 21, 21, 0.7);
     left: 0;
-    bottom: -430px; }
+    bottom: -432px;
+    z-index: 1000; }
 
 .all-list i {
   margin-left: 22px;
@@ -323,8 +324,8 @@
   background: #fff;
   position: absolute;
   left: 190px;
-  bottom: 0;
-  box-shadow: 0 0 2px #ccc;
+  bottom: -432px;
+  transition: all .3;
   display: none; }
 
 #nav .list-detail {
