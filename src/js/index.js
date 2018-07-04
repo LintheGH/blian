@@ -10,25 +10,36 @@ require(['jquery'],function($){
     let lics = $('.tr-idx').find('li');
     let timer;
     let idx = 1;
-    let basemovel  = -171;
-    let basemover = 171;
+    let basemovel  = -160;
+    let basemover = 160;
     let block = $('.b-lists')[0];
-    for(let i=0;i<lists.length;i++){
-        lists[i].onmouseover = function(){
-            for(let j=0;j<list_details.length;j++){
-                if(list_details[i].className.indexOf(this.className) > 0){
-                    list_details[i].style.display = 'block';
-                }else{
-                    list_details[i].style.display = 'none';
-                }
-            }
-        }
-    }
-    $('.all-list').on('mouseout',function(){
-        for(let i=0;i<list_details.length;i++){
-                list_details[i].style.display = 'none';
-        }
-    })
+    // for(let i=0;i<lists.length;i++){
+    //     lists[i].onmouseover = function(){
+    //         for(let j=0;j<list_details.length;j++){
+    //             if(list_details[i].className.indexOf(this.className) > 0){
+    //                 list_details[i].style.display = 'block';
+    //             }else{
+    //                 list_details[i].style.display = 'none';
+    //             }
+    //         }
+    //     }
+    //     list_details[i].onmouseover = function(){
+    //         for(let i=0;i<list_details.length;i++){
+    //             list_details[i].style.display = 'block';
+    //         }
+    //     }
+    //     list_details[i].onmouseout = function(){
+    //         for(let i=0;i<list_details.length;i++){
+    //             list_details[i].style.display = 'none';
+    //         }
+    //     }
+    // }
+    // $('.all-list').on('mouseout',function(){
+    //     for(let i=0;i<list_details.length;i++){
+    //             list_details[i].style.display = 'none';
+    //     }
+    // });
+    
     
     function start(){
 
@@ -80,7 +91,7 @@ require(['jquery'],function($){
         
         $('.b-lists')[0].style.marginLeft = (margin_status + basemovel) + 'px';
         margin_status = Number(block.style.marginLeft.slice(0,-2));
-        if(margin_status <= -1920){
+        if(margin_status <= -960){
             $('.arrowl')[0].style.display = 'none'
         }
     });

@@ -263,14 +263,16 @@
   font-weight: normal; }
 
 .all-list li {
-  height: 29px;
-  opacity: 0.8; }
+  height: 29px; }
 
 .all-list li:first-child {
   margin-top: 14px; }
 
 .all-list li:hover {
   background: #aaa; }
+
+.all-list li:hover .list-detail {
+  display: inline; }
 
 .all-list a:hover {
   text-decoration: underline; }
@@ -323,10 +325,11 @@
   height: 430px;
   background: #fff;
   position: absolute;
-  left: 190px;
-  bottom: -432px;
+  left: 189px;
+  bottom: 0;
   transition: all .3;
-  display: none; }
+  display: none;
+  z-index: 1000; }
 
 #nav .list-detail {
   opacity: 1; }
