@@ -1,9 +1,11 @@
 require.config({
     paths:{
-        'jquery':'../lib/jquery'
+        'jquery':'../lib/jquery',
+        'generate':'./datagrid',
+        'http':'./httpclient'
     }
 })
-require(['jquery'],function($){
+require(['jquery','generate','http'],function($,gen,http){
     let list_details = $('.list-detail');
     let lists = $('.all-list').find('li');
     let lis = $('.top-roll').find('li');
@@ -13,6 +15,15 @@ require(['jquery'],function($){
     let basemovel  = -160;
     let basemover = 160;
     let block = $('.b-lists')[0];
+    let target = $('.guess-lists')[0];
+
+    http.get('products.php',{limit:20,order:'indexid'}).then(function(res){
+        let result = window.eval('(' + res + ')')
+
+        gen.index_generate_list(result,target);
+    },function(err){
+        console.log(err);
+    })
     // for(let i=0;i<lists.length;i++){
     //     lists[i].onmouseover = function(){
     //         for(let j=0;j<list_details.length;j++){
@@ -105,4 +116,8 @@ require(['jquery'],function($){
             $('.arrowr')[0].style.display = 'none'
         }
     })
+
+
+
+    
 })

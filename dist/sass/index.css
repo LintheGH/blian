@@ -520,12 +520,6 @@
   .tr-idx .tr-idx01 {
     box-shadow: 0 0 0 4px #ccc; }
 
-.expand img {
-  transition: all .7s; }
-
-.expand:hover img {
-  transform: scale(1.1); }
-
 .news {
   margin-top: 20px;
   width: 100%;
@@ -557,9 +551,7 @@
     float: left;
     width: 160px;
     border-right: 1px dashed #ccc;
-    padding: 5px;
-    box-sizing: border-box;
-    overflow: hidden; }
+    padding: 5px; }
   .b-lists li:last-child {
     border-right: 0; }
 
@@ -576,7 +568,6 @@
   line-height: 50px; }
 
 .arrowr {
-  display: none;
   text-align: center;
   opacity: .8;
   width: 18px;
@@ -589,7 +580,7 @@
   line-height: 50px; }
 
 .item-img {
-  height: 150px; }
+  height: 158px; }
   .item-img img {
     height: 100%; }
 
@@ -624,21 +615,6 @@
   display: "inline-block";
   overflow: hidden;
   background: #ccc; }
-  .adv-banner ul {
-    width: 1216px;
-    height: 100%;
-    width: 100%; }
-    .adv-banner ul a {
-      display: inline-block;
-      width: 100%;
-      height: 100%; }
-    .adv-banner ul li {
-      float: left;
-      width: 304px;
-      height: 100%; }
-  .adv-banner img {
-    width: 100%;
-    height: 100%; }
 
 .adv-lists {
   width: 880px;
@@ -649,21 +625,13 @@
     height: 180px;
     margin-left: 10px;
     float: left;
-    overflow: hidden; }
+    background: pink; }
   .adv-lists li:nth-child(4) {
     margin-top: 10px; }
   .adv-lists li:nth-child(5) {
     margin-top: 10px; }
   .adv-lists li:nth-child(6) {
     margin-top: 10px; }
-  .adv-lists a {
-    display: inline-block;
-    width: 100%;
-    height: 100%; }
-  .adv-lists img {
-    width: 100%;
-    height: 100%;
-    transition: all .7s; }
 
 .adv-type {
   height: 516px;
@@ -688,31 +656,11 @@
   box-sizing: border-box; }
 
 .type-lists-t {
-  height: 304px;
+  height: 402px;
   width: 884px;
   background: pink;
   box-sizing: border-box; }
   .type-lists-t li {
-    width: 220px;
-    height: 100%;
-    float: left; }
-
-.type-lists-c {
-  height: 98px;
-  width: 884px;
-  background: pink;
-  box-sizing: border-box; }
-  .type-lists-c li {
-    width: 220px;
-    height: 100%;
-    float: left; }
-
-.type-lists-b {
-  height: 64px;
-  width: 884px;
-  background: pink;
-  box-sizing: border-box; }
-  .type-lists-b li {
     width: 220px;
     height: 100%;
     float: left; }
@@ -731,6 +679,12 @@
   border: 1px dashed #ccc;
   border-left: 0 none;
   background: #aaa;
+  box-sizing: border-box; }
+
+.type-lists-b {
+  width: 884px;
+  height: 64px;
+  background: black;
   box-sizing: border-box; }
 
 .guess {
@@ -785,7 +739,10 @@
   width: 218px;
   height: 40px;
   margin-top: 12px;
-  color: #666666; }
+  color: #666666;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
 
 .g-item-main {
   width: 218px;

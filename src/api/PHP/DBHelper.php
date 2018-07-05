@@ -40,13 +40,55 @@
     // function multi_query_oop($sql){
     //     $jsonData = array();
     //     $conn = connect_oop();
-    //     $conn->multi_query($sqls)
+    //     $conn->multi_query($sqls);
     //     while($mysqli->next_result()){
     //         $data = $conn->store_result();   //获取结果集  
     //         $jsonData[] = $data;
     //     }
     //     $conn->close();//关闭连接
     // }
+
+    //执行多条 sql 语句
+    function multi_query_oop($sql){
+        $jsonData = [];
+        $conn = connect_oop();
+        $flag = 0;
+        if ($conn->multi_query($sql)) {
+            do {
+                $rows = array();
+                if ($result = $conn->store_result()) {
+                    while ($row = $result->fetch_assoc()) {
+                        $rows[] = $row;
+                    }
+                    $result->free();
+                }
+                $flag++;
+                $data = ["data".$flag=>$rows];
+                $jsonData = array_merge($jsonData, $data);
+                
+            } while ($conn->more_results() && $conn->next_result());
+        }
+
+        $conn->close();//关闭连接
+        return $jsonData;
+    }
+
+
+
+    // //单独执行一条 sql 语句
+    // function query_oop($sql){
+    //     $jsonData = array();
+    //     $conn = connect_oop();
+    //     $result = $conn->query($sql);
+    //     while ($row = $result->fetch_assoc()){
+    //         $jsonData[] = $row;
+    //     };
+    //     $result->free();//释放内存
+    //     $conn->close();//关闭连接
+    //     return $jsonData;
+    // }
+
+        
 
     //初始化连接对象方法
     function connect(){

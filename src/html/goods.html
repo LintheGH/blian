@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../dist/sass/common.min.css">
     <link rel="stylesheet" href="../../dist/sass/goods.min.css">
     <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
-
+    <script src="../lib/require.js" data-main="../js/goods.js"></script>
     <title>详情test</title>
 </head>
 <body>
@@ -111,7 +111,7 @@
         <header id="top">
             <div class="container clearfix">
                 <div class="top-logo fl">
-                    <h1><img src="../img/header-logo.png" alt=""></h1>
+                    <h1><img  src="../img/header-logo.png" alt=""></h1>
                     <div class="top-item"><img src="../img/top-item.jpg" alt=""></div>
                 </div>
                 <div class="search fl">
@@ -1619,7 +1619,96 @@
                     <span>&gt;</span>
                     <span class="index-url-search"><input type="text" id="url-search" name="url-search" placehoder="当前条件下搜索"><a href="javascript:" class="fa fa-search"></a></span>
                 </div>
-                <div class="i-shownumber fr">共找到<span class="idx-number">123451</span>件商品</div>
+                <div class="i-shownumber fr">共找到<span class="idx-number"></span>件商品</div>
+            </div>
+        </div>
+        <div id="item-info">
+            <div class="container clearfix">
+                <div class="ii-pic fl">
+                    <div class="ii-mainpic">
+                        <div class="zoompic"></div>
+                        <a href="#" class="zoom"><img src="../img/goodslist/goods-test.jpg" alt=""></a>
+                    </div>
+                    <div class="minpic clearfix">
+                        <a href="#"><img src="../img/goodslist/goods-test.jpg" alt="" data-big="../img/goodslist/goods-test.jpg"></a>
+                    </div>
+                    <div class="share">
+                        <div class="share-s">
+                            <i class="fa fa-share-alt"></i>
+                            <a href="#">分享</a>
+                            <span class="delta"></span>
+                        </div>
+                        <div class="goodsid fr">
+                            商品编号<span>302001449157</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-scription fl">
+                    <div class="is-title">
+                        <h2 title="【官方授权】Apple 新款无线蓝牙鼠标（白）MLA02CH/A Magic Mouse 2"><span class="item-type">自营</span>【官方授权】Apple 新款无线蓝牙鼠标（白）MLA02CH/A Magic Mouse 2</h2>
+                    </div>
+                    <div class="is-scr">支持蓝牙并安装有 OS X v10.11 或更新版本操作系统的 Mac 电脑。</div>
+                    <div class="is-price">
+                        <span>销售价</span>
+                        ￥<span id="item-price">480</span>
+                    </div>
+                    <div class="is-delivery">
+                        <span>配送</span>
+                        <div class="isd-select">
+                            <div class="isd-s">
+                                <a href="javascript:">
+                                    上海黄浦区
+                                    <span class="isd-sd"></span>
+                                </a>
+                            </div>
+                            <ul class="isds-detail">
+                                <li></li>
+                            </ul>
+                        </div>
+                        <span>99元免基础运费（5kg内）</span>
+                    </div>
+                    <div class="is-serve">
+                        <span>服务</span>
+                        <div class="iss-reach">
+                            本产品由百联云商提供发货和售后服务：预计
+                            <span class="reach-day">2018-7-6</span>送达 
+                        </div>
+                    </div>
+                    <div class="is-shouhou">
+                      
+                        <ul >
+                            <li>支持到店字体</li>
+                            <li><a href="#">支持7天无理由退货</a></li>
+                            <li>支持货到付款</li>
+                        </ul>
+                    </div>
+                    <div class="is-buycount">
+                        <span>购买数量</span>
+                        <div class="isb">
+                            <span id="minus-btn"><a href="javascript:">-</a></span>
+                            <input type="text" class="isb-count" name="isb-count" value=1>
+                            <span id="plus-btn"><a href="javascript:">+</a></span>
+                        </div>
+                        <div class="stock">
+                            库存<span id="item-number">46</span>件
+                        </div>
+                    </div>
+                    <div class="is-btns">
+
+                        <button class="buynow">立即购买</button>
+                        <button class="addtocar">加入购物车</button>
+                        <div class="collect" ><a href="javascript:"><i></i>收藏</a></div>
+                    </div>
+                    <div class="is-comment">
+                        <div class="isc-goodcomment">
+                            <span><i>98</i>%好评</span>
+                        </div>
+                        <div class="isc-comments">
+                            <span><i>26</i>评价</span>
+                        </div>
+                        <a href="javascript:">返还积分</a>
+                    </div>
+                </div>
             </div>
         </div>
         <footer id="bottom">

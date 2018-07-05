@@ -6,12 +6,14 @@ require.config({
 });
 
 define('heighlight',['jquery','regtext'],function($,reg){
-    return function(res,unamee){
+    return function(res,unamee=null){
         
         for(let i=0;i < res.length;i++){
             console.log(res[i].value)
             res[i].onfocus = function(evt){
-                unamee.style.display = 'none';
+                if(unamee){
+                    unamee.style.display = 'none';
+                }
                 for(let i=0;i<res.length;i++){
                     if(evt.target == res[i]){
                         res[i].parentNode.getElementsByClassName('showinfo')[0].style.display = 'inline-block';
