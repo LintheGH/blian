@@ -76,6 +76,8 @@ require(['jquery','generate','http'],function($,gen,http){
             idx2 = 0;
             my_ul.style.transition = 'all 0s';
             my_ul.style.marginLeft = '0';
+        }else{
+            my_ul.style.transition = 'all 1s';
         }
         my_ul.style.marginLeft = `-${idx2*306}px`;
 
