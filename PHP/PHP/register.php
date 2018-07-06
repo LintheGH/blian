@@ -1,25 +1,24 @@
 <?php
 	include 'DBHelper.php';
 	
-	$username = $_POST["username"];
-	$password = $_POST["pwd"];
+	$email = $_POST["email"];
+	$password = $_POST["password"];
 	$phone = $_POST["phone"];
 	//判断当前 email 是否已存在数据表中
-	$usernameCheck = "select * from users where `username` ='$username'";
-	$result = query($usernameCheck);
-	
+	$emailCheck = "select * from gz1610 where `email` ='$email'";
+	$result = query($emailCheck);
+
 	//当前 email 不存在，执行插入操作
 	if(count($result) < 1){
-		$sql = "insert into users(username, password, phone) values('$username', '$password', '$phone')";
+		$sql = "insert into gz1610(email, password, phone) values('$email', '$password', '$phone')";
 		// echo $sql;
 		$excute = excute($sql);
-		
 		if($excute){
 			echo "{state: true}";
 		} else {
 			echo "{state: false, message: '插入失败！！！'}";
 		}
 	} else {
-		echo "{state: false, message: '已被注册！！！'}";
+		echo "{state: false, message: 'email 已被注册！！！'}";
 	}
 ?>

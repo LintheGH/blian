@@ -8,7 +8,7 @@
     $order = isset($_GET["order"]) ? $_GET["order"] : '';
 
     include 'DBHelper.php';
-    $sql = 'select SQL_CALC_FOUND_ROWS * from products ';
+    $sql = 'select SQL_CALC_FOUND_ROWS * from student ';
     if($order){
         $sql .= ' order by ';
         $sql .= $order;

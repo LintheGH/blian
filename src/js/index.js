@@ -98,7 +98,6 @@ require(['jquery','generate','http'],function($,gen,http){
     }
 
 
-
     function start(fn){
         return setInterval(function(){
             fn();
@@ -140,10 +139,10 @@ require(['jquery','generate','http'],function($,gen,http){
     }
     for(let i=0;i<my_lis.length;i++){
         my_lis[i].onmouseover = function(){
-            stop(timer3);
+            stop(timer2);
         }
         my_lis[i].onmouseout = function(){
-            timer3 = start(myroll);
+            timer2 = start(myroll);
         }
     }
 

@@ -52,6 +52,41 @@ define(['jquery'],function($){
                             
                             $(html).appendTo(target);
                         }
+        },
+        car_generate_list:function(res,target,arr){
+                        for(let i=0;i<res.length;i++){
+                            if(res[i].type == 1){
+                                var type = '百联自营';
+                            }else{
+                                var type = '';
+                            }
+                            let html = `<li class="clearfix">
+                                            <input type="checkbox" class="fl">
+                                            <div class="li-msg fl clearfix">
+                                                <span class="li-ipic"><img src="${res[i].picture}"></span>
+                                                <span class="li-scription">
+                                                    ${res[i].title}
+                                                </span>
+                                            </div>
+                                            <div class="li-price fl">￥${res[i].price}</div>
+                                            <div class="li-number fl">
+                                                <div class="isb">
+                                                    <span id="minus-btn"><a href="javascript:">-</a></span>
+                                                    <input type="text" class="isb-count" name="isb-count" value=${arr[i]}>
+                                                    <span id="plus-btn"><a href="javascript:">+</a></span>
+                                                </div>
+                                            </div>
+                                            <div class="li-totalp fl">
+                                                ￥<span id="li-totalp">${res[i].price*arr[i]}</span>
+                                            </div>
+                                            <div class="li-operation fl">
+                                                <span class="li-removetocoll"><a href="javascript:" id="li-collect">移入收藏夹</a></span>
+                                                <span class="li-dele"><a href="javascript:" id="li-del">删除</a></span>
+                                            </div>
+                                        </li>`
+                            
+                            $(html).appendTo(target);
+                        }
         }
     }
     

@@ -6,7 +6,7 @@ require.config({
 
 define(['jquery'],function($){
     
-        let baseUrl = 'http://localhost:89/src/api/php/'
+        let baseUrl = 'http://localhost:89/src/api/'
         let urlFilter = function(url){
             if(url.startsWith('http')){
                 return url;

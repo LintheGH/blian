@@ -8,13 +8,13 @@
     $order = isset($_GET["order"]) ? $_GET["order"] : '';
 
     include 'DBHelper.php';
-    $sql = 'select SQL_CALC_FOUND_ROWS * from products ';
+    $sql = 'select SQL_CALC_FOUND_ROWS * from students ';
     if($order){
         $sql .= ' order by ';
         $sql .= $order;
     }
     $sql .= ' limit ';
-    $sql .= $page - 1;
+    $sql .= $page - 1; 
     $sql .= ', ';
     $sql .= $limit;
 

@@ -42,7 +42,8 @@
     border: 1px solid #ccc;
     box-shadow: 0 0 2px #cccc;
     overflow: hidden;
-    background: #fff; }
+    background: #fff;
+    z-index: 1000; }
   .top_nav_sites li {
     float: left;
     width: 134px;
@@ -98,7 +99,8 @@
   display: none;
   padding: 15px;
   left: -607px;
-  top: 32px; }
+  top: 32px;
+  z-index: 1000; }
 
 .pay-dl {
   width: 660px;
@@ -138,7 +140,8 @@
   top: 32px;
   left: -225px;
   border: 1px solid #e2e2e2;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1000; }
 
 .palm-item {
   float: left;

@@ -5,7 +5,7 @@
         $servername = 'localhost';
         $username = 'root';
         $password = 'root';
-        $database = 'userdata';
+        $database = '1000phone';
 
         //连接数据库
         $conn = new mysqli($servername,$username,$password,$database);
@@ -15,7 +15,7 @@
             die('连接失败'.$conn->connect_error);
         }
 
-        // $conn->set_charset('utf8');
+        $conn->set_charset('utf8');
         return $conn;
     }
 
@@ -23,11 +23,9 @@
     function query_oop($sql){
         $conn = connect_oop();
         $result = $conn->query($sql);
-        $dataset = array();
-        $dataset = $result->fetch_all(MYSQLI_ASSOC);
         $result->free();//释放内存
         $conn->close();//关闭连接
-        return $dataset;
+        return $result;
     }
 
     function excute_oop($sql){
@@ -37,65 +35,23 @@
         return $result;
     }
 
-    // function multi_query_oop($sql){
-    //     $jsonData = array();
-    //     $conn = connect_oop();
-    //     $conn->multi_query($sqls);
-    //     while($mysqli->next_result()){
-    //         $data = $conn->store_result();   //获取结果集  
-    //         $jsonData[] = $data;
-    //     }
-    //     $conn->close();//关闭连接
-    // }
-
-    //执行多条 sql 语句
     function multi_query_oop($sql){
-        $jsonData = [];
+        $jsonData = array();
         $conn = connect_oop();
-        $flag = 0;
-        if ($conn->multi_query($sql)) {
-            do {
-                $rows = array();
-                if ($result = $conn->store_result()) {
-                    while ($row = $result->fetch_assoc()) {
-                        $rows[] = $row;
-                    }
-                    $result->free();
-                }
-                $flag++;
-                $data = ["data".$flag=>$rows];
-                $jsonData = array_merge($jsonData, $data);
-                
-            } while ($conn->more_results() && $conn->next_result());
+        $conn->multi_query($sqls)
+        while($mysqli->next_result()){
+            $data = $conn->store_result();   //获取结果集  
+            $jsonData[] = $data;
         }
-
         $conn->close();//关闭连接
-        return $jsonData;
     }
-
-
-
-    // //单独执行一条 sql 语句
-    // function query_oop($sql){
-    //     $jsonData = array();
-    //     $conn = connect_oop();
-    //     $result = $conn->query($sql);
-    //     while ($row = $result->fetch_assoc()){
-    //         $jsonData[] = $row;
-    //     };
-    //     $result->free();//释放内存
-    //     $conn->close();//关闭连接
-    //     return $jsonData;
-    // }
-
-        
 
     //初始化连接对象方法
     function connect(){
         $servername = "localhost";//
         $username = "root";
         $password = "root";
-        $dbname = 'userdata'; 
+        $dbname = '1000phone'; 
         //初始化连接，返回一个连接对象(包含所连接数据库的信息)
         $con = mysqli_connect($servername,$username,$password,$dbname); 
 
