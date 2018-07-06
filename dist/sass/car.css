@@ -576,7 +576,8 @@
     width: 30px;
     height: 15px;
     box-sizing: border-box;
-    border: 0; }
+    border: 0;
+    text-align: center; }
   .isb #minus-btn {
     display: inline-block;
     width: 19px;

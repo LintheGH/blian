@@ -11,6 +11,8 @@ require(['jquery','http','cookie'],function($,http,cookie){
         let arr = window.location.search.slice(1).split('=');
         let indexid = Number(arr[1]);
         let data = {};
+
+        //请求传递过来的商品信息
         http.get('getitem.php',{
             indexid:indexid
         }).then(function(res){
@@ -78,8 +80,68 @@ require(['jquery','http','cookie'],function($,http,cookie){
             }
             window.location.href = './car.html';
         })
+
+
+
+        //数量增加函数
+        var plus = function(){
+            let num = Number($('.isb-count').val());
+            num++;
+            $('.isb-count').val(num);
+            $('#minus-btn').unbind('click');
+            $('#minus-btn').bind('click',minus);
+            let isb = Number($('.isb-count').val());
+            let n = Number($('#item-number').text())-1;
+            console.log(isb,n)
+            if(isb >= n ){
+                $('#plus-btn').unbind('click');
+            }
+            else{
+                $('#plus-btn').unbind('click');
+                $('#plus-btn').bind('click',plus);
+            }
+        }
+
+        //数量减少函数
+        var minus = function(){
+            let num = Number($('.isb-count').val());
+            num--;
+            $('.isb-count').val(num);
+            $('#plus-btn').unbind('click');
+            $('#plus-btn').bind('click',plus);
+            let isb = Number($('.isb-count').val());
+            console.log(isb)
+            if(isb <= 2){
+                $('#minus-btn').unbind('click');
+            }else{
+                $('#minus-btn').unbind('click');
+                $('#minus-btn').bind('click',minus);
+
+            }
+        }
+    
+        //数量增加事件
+        $('#plus-btn').bind('click',plus);
+
+        //数量减少事件
+        $('#minus-btn').bind('click',minus)
+
+
+        //到达时间
+        var getDate = function(){
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            let nowDate = `${year}-${month}-${day+3}`;
+            return nowDate;
+        }
+        
+        $('.reach-day').text(getDate());
+
+
+
     })
     
-
 })
 

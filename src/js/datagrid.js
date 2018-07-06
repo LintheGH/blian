@@ -61,11 +61,11 @@ define(['jquery'],function($){
                                 var type = '';
                             }
                             let html = `<li class="clearfix">
-                                            <input type="checkbox" class="fl">
+                                            <input type="checkbox" class="fl" checked>
                                             <div class="li-msg fl clearfix">
-                                                <span class="li-ipic"><img src="${res[i].picture}"></span>
+                                                <span class="li-ipic"><a href="./goods.html?indexid=${res[i].indexid}"><img src="${res[i].picture}"></a></span>
                                                 <span class="li-scription">
-                                                    ${res[i].title}
+                                                    <a href="./goods.html?indexid=${res[i].indexid}"">${res[i].title}</a>
                                                 </span>
                                             </div>
                                             <div class="li-price fl">￥${res[i].price}</div>
