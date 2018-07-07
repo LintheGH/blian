@@ -1,3 +1,9 @@
+/*
+
+    请求操作封装
+
+*/
+
 require.config({
     paths:{
         'jquery':'../lib/jquery'
@@ -15,12 +21,13 @@ define(['jquery'],function($){
             }
         }
         return {
-            get:function(_url,data){
+            get:function(_url,data,async=true){
                 return new Promise(function(resolve,reject){
                     $.ajax({
                         url:urlFilter(_url),
                         data:data || {},
                         type:'GET',
+                        async:async,
                         success:function(res){
                             resolve(res);
                         },
@@ -30,12 +37,13 @@ define(['jquery'],function($){
                     })
                 })
             },
-            post:function(_url,data){
+            post:function(_url,data,async=true){
                 return new Promise(function(resolve,reject){
                     $.ajax({
                         url:urlFilter(_url),
                         data:data || {},
                         type:'POST',
+                        async:async,
                         success:function(res){
                             resolve(res);
                         },

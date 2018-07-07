@@ -499,6 +499,7 @@
 .list-top {
   height: 44px;
   line-height: 44px;
+  font-size: 12px;
   border-bottom: 1px solid #ccc;
   padding-left: 16px; }
   .list-top span {
@@ -554,6 +555,8 @@
   .li-operation .li-removetocoll {
     display: inline-block;
     width: 100%; }
+  .li-operation .li-dele {
+    line-height: 28px; }
 
 .li-ipic:hover {
   border: 1px solid red; }
@@ -610,6 +613,40 @@
 .list-bottom {
   height: 52px;
   line-height: 52px;
+  font-size: 12px;
   padding-left: 16px;
   margin-top: 18px;
-  background: #F3F3F3; }
+  background: #F3F3F3;
+  box-shadow: -2px 4px 1px 0 #ccc; }
+  .list-bottom i {
+    display: inline-block;
+    width: 12px;
+    height: 12px; }
+  .list-bottom span {
+    display: inline-block;
+    margin-left: 15px; }
+  .list-bottom .selectednum {
+    margin-left: 200px; }
+
+.showtotal {
+  height: 100%; }
+
+#calculatetotal {
+  overflow: hidden;
+  padding: 0 20px;
+  height: 100%;
+  background: red;
+  color: #fff; }
+
+.stprice {
+  height: 100%;
+  line-height: 25px;
+  text-align: right; }
+  .stprice span {
+    height: 25px;
+    width: 100%; }
+
+#totalprice {
+  color: red;
+  font-weight: bold;
+  font-size: 22px; }

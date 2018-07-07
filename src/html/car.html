@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../dist/sass/common.min.css">
     <link rel="stylesheet" href="../../dist/sass/car.min.css">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"> -->
     <script src="../lib/require.js" data-main="../js/car.js"></script>
     <title>购物车</title>
@@ -143,18 +144,18 @@
                                 【官方授权】阿大多数发大水发士大夫撒地方撒地方噶
                             </span>
                         </div>
-                        <div class="li-price fl">￥748.00</div>
+                        <div class="li-price fl">￥748.65</div>
                         <div class="li-number fl">
-                            <div class="isb">
+                            <div class="isb" data-indexid="191">
                                 <span id="minus-btn"><a href="javascript:">-</a></span>
-                                <input type="text" class="isb-count" name="isb-count" value=1>
+                                <input type="text" class="isb-count" name="isb-count" value=1 data-savenum="555">
                                 <span id="plus-btn"><a href="javascript:">+</a></span>
                             </div>
                         </div>
                         <div class="li-totalp fl">
                             ￥<span id="li-totalp">748</span>
                         </div>
-                        <div class="li-operation fl">
+                        <div class="li-operation fl" data-indexid="191">
                             <span class="li-removetocoll"><a href="javascript:" id="li-collect">移入收藏夹</a></span>
                             <span class="li-dele"><a href="javascript:" id="li-del">删除</a></span>
                         </div>
@@ -163,15 +164,15 @@
                 <div class="list-bottom">
                     <input type="checkbox" name="allselect" id="allselect">
                     <span>全选</span>
-                    <span><a href="#"><i></i>删除</a></span>
-                    <span><a href="#">清除失效产品</a>/span>
+                    <span><a href="#"><i class="fa fa-trash-o"></i>删除</a></span>
+                    <span><a href="#">清除失效产品</a></span>
                     <span><a href="#">移入收藏夹</a></span>
-                    <span>已选择<i>3</i>件产品</span>
+                    <span class="selectednum"><a href="javascript:">已选择<i>3</i>件产品</a></span>
                     <div class="showtotal fr clearfix">
                         <button id="calculatetotal" class="fr">去结算</button>
                         <div class="stprice fr">
-                            <span>商品金额（不含运费）：￥<i>1256</i></span>
-                            <span>价格优惠：-￥<i>0.00</i></span>
+                            <span class="fl">商品金额（不含运费）：￥<i id="totalprice">1256</i></span>
+                            <span class="fl">价格优惠：-￥<i id="discount">0.00</i></span>
                         </div>
                     </div>
                 </div>

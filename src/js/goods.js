@@ -40,13 +40,13 @@ require(['jquery','http','cookie'],function($,http,cookie){
         //加入购物车按钮
         $('.addtocar').on('click',function(){
             let id = $('.goodsid')[0].dataset.idxid;
-            let checkid = cookie.check(id);
+            let checkid = cookie.check(id);// null || 商品数量
             if(checkid){
                 data = cookie.read();
                 data[id] = checkid + Number($('.isb-count').val());
                 cookie.set(data);
             }else{    
-                data = cookie.read();
+                data = cookie.read();//undefinded || {}
                 if(data){
                     data[id] = Number($('.isb-count').val());
                     cookie.set(data);
@@ -61,14 +61,14 @@ require(['jquery','http','cookie'],function($,http,cookie){
         //立即购买按钮
         $('.buynow').on('click',function(){
             let id = $('.goodsid')[0].dataset.idxid;
-            let checkid = cookie.check(id);
+            let checkid = cookie.check(id);// null || 商品数量
             if(checkid){
                 data = cookie.read();
                 data[id] = checkid + Number($('.isb-count').val());
                 cookie.set(data);
             }else{
                 
-                data = cookie.read();
+                data = cookie.read();//undefinded || {}
                 if(data){
                     data[id] = Number($('.isb-count').val());
                     cookie.set(data);
@@ -80,7 +80,6 @@ require(['jquery','http','cookie'],function($,http,cookie){
             }
             window.location.href = './car.html';
         })
-
 
 
         //数量增加函数
@@ -139,7 +138,18 @@ require(['jquery','http','cookie'],function($,http,cookie){
         
         $('.reach-day').text(getDate());
 
-
+        //输入框
+        $('.isb-count').on('change',function(){
+            let num = $('.isb-count').val().replace(/\D/g,'');
+            let snum = Number($('#item-number').val());
+            if(num <= 1 ){
+                num = 1;
+            }if(num >= snum){
+            num = snum;   
+            }
+            console.log(num,snum)
+            $('.isb-count').val(num);
+        });
 
     })
     

@@ -1,3 +1,10 @@
+/*
+
+    html结构生成
+
+*/
+
+
 require.config({
     paths:{
         'jquery':'../lib/jquery'
@@ -6,6 +13,7 @@ require.config({
 
 define(['jquery'],function($){
     return {
+        //商品列表生成
         generate_list:function(res,target){
 
                     let dataset = res.data1;
@@ -28,6 +36,7 @@ define(['jquery'],function($){
                         $(html).appendTo(target);
                     }
                 },
+        //首页推荐商品生成
         index_generate_list:function(res,target){
                         let dataset = res.data1;
                         for(let i=0;i<dataset.length;i++){
@@ -53,6 +62,7 @@ define(['jquery'],function($){
                             $(html).appendTo(target);
                         }
         },
+        //购物车列表生成
         car_generate_list:function(res,target,arr){
                         for(let i=0;i<res.length;i++){
                             if(res[i].type == 1){
@@ -70,16 +80,16 @@ define(['jquery'],function($){
                                             </div>
                                             <div class="li-price fl">￥${res[i].price}</div>
                                             <div class="li-number fl">
-                                                <div class="isb">
+                                                <div class="isb" data-indexid="${res[i].indexid}">
                                                     <span id="minus-btn"><a href="javascript:">-</a></span>
-                                                    <input type="text" class="isb-count" name="isb-count" value=${arr[i]}>
+                                                    <input type="text" class="isb-count" name="isb-count" value=${arr[i]} data-savenum="${res[i].number}">
                                                     <span id="plus-btn"><a href="javascript:">+</a></span>
                                                 </div>
                                             </div>
                                             <div class="li-totalp fl">
                                                 ￥<span id="li-totalp">${res[i].price*arr[i]}</span>
                                             </div>
-                                            <div class="li-operation fl">
+                                            <div class="li-operation fl" data-indexid="${res[i].indexid}">
                                                 <span class="li-removetocoll"><a href="javascript:" id="li-collect">移入收藏夹</a></span>
                                                 <span class="li-dele"><a href="javascript:" id="li-del">删除</a></span>
                                             </div>

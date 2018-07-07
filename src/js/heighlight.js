@@ -1,3 +1,9 @@
+/*
+
+    输入框高亮模块
+
+*/
+
 require.config({
     paths:{
         'jquery':'../lib/jquery',

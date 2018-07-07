@@ -4,8 +4,11 @@
     header('Access-Control-Allow-Methods:POST,GET,OPTIONS'); 
     header('Access-Control-Request-Headers:accept, content-type');
 
-    $indexids = isset($_GET['indexids']) ? $_GET['indexids'] : 0; 
+    $indexids = isset($_GET['indexids']) ? $_GET['indexids'] : array(); 
     $length = count($indexids);
+    if($length <= 0){
+        die("{}");
+    }
     $sql = "";
     for($x = 0;$x < $length;$x++){
         $sql .= " indexid= " .$indexids[$x] . " or ";
