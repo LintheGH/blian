@@ -2,11 +2,12 @@ require.config({
     paths:{
         'jquery':'../lib/jquery',
         'http':'./httpclient',
-        'cookie':'./cookieOperate'
+        'cookie':'./cookieOperate',
+        'zoom':'./xZoom'
     }
 });
 
-require(['jquery','http','cookie'],function($,http,cookie){
+require(['jquery','http','cookie','zoom'],function($,http,cookie){
     $(function(){
         let arr = window.location.search.slice(1).split('=');
         let indexid = Number(arr[1]);
@@ -18,6 +19,7 @@ require(['jquery','http','cookie'],function($,http,cookie){
         }).then(function(res){
                     let obj = window.eval('(' + res + ')')[0];
                     $('.ii-mainpic').find('img')[0].src = `${obj.picture}`;
+                    $('.ii-mainpic').find('img')[0].setAttribute('data-big',`${obj.bigpicture}`)
                     $('.minpic').find('img')[0].src = `${obj.picture}`;
                     $('.goodsid').find('span')[0].innerText = `${obj.id}`;
                     $('.goodsid')[0].setAttribute('data-idxid',`${obj.indexid}`);
@@ -33,6 +35,11 @@ require(['jquery','http','cookie'],function($,http,cookie){
                     }else if(obj.type == 1){
                         $('.item-type')[0].style.display = `inline-block`;
                     }
+                    $('.ii-mainpic').xZoom({
+                        width:450,
+                        height:450,
+                        
+                    });
         },function(err){
             console.log(err);
         });
@@ -90,7 +97,7 @@ require(['jquery','http','cookie'],function($,http,cookie){
             $('#minus-btn').unbind('click');
             $('#minus-btn').bind('click',minus);
             let isb = Number($('.isb-count').val());
-            let n = Number($('#item-number').text())-1;
+            let n = Number($('#item-number').text());
             console.log(isb,n)
             if(isb >= n ){
                 $('#plus-btn').unbind('click');
@@ -110,7 +117,7 @@ require(['jquery','http','cookie'],function($,http,cookie){
             $('#plus-btn').bind('click',plus);
             let isb = Number($('.isb-count').val());
             console.log(isb)
-            if(isb <= 2){
+            if(isb <= 1){
                 $('#minus-btn').unbind('click');
             }else{
                 $('#minus-btn').unbind('click');

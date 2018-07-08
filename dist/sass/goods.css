@@ -557,8 +557,8 @@
   box-sizing: border-box; }
 
 .ii-mainpic {
-  width: 450px;
-  height: 450px;
+  width: 450px !important;
+  height: 450px !important;
   border: 1px solid #ddd;
   box-sizing: border-box; }
   .ii-mainpic a {
@@ -609,7 +609,8 @@
 
 .item-scription {
   margin-left: 30px;
-  font-size: 14px; }
+  font-size: 14px;
+  width: 710px; }
 
 .is-title {
   height: 55px; }
@@ -629,7 +630,10 @@
 
 .is-src {
   font-size: 12px;
-  line-height: 22px; }
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 
 .is-price span:first-child, .is-delivery span:first-child, .is-serve span:first-child, .is-buycount span:first-child {
   display: inline-block;
@@ -807,3 +811,35 @@
   margin-left: 10px; }
   .isc-comments i {
     font-weight: bold; }
+
+.xzoom-small {
+  position: relative;
+  overflow: hidden;
+  width: 320px;
+  height: 320px; }
+
+.xzoom-small img {
+  display: block; }
+
+.xzoom-small .zoom {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fc0;
+  background-color: #ff0;
+  background-color: rgba(255, 255, 0, 0.3);
+  filter: alpha(Opacity=30); }
+
+.xzoom-big {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid #ccc; }
+
+.xzoom-big img {
+  position: absolute;
+  left: 0;
+  right: 0; }

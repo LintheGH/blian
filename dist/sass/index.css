@@ -818,3 +818,68 @@ ul.type-lists-b {
   padding: 5px;
   border: 1px solid #999;
   border-radius: 13px; }
+
+#absordtop {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 3px 3px 0 #ccc;
+  background: #fff;
+  position: fixed;
+  z-index: 2000;
+  top: -75px;
+  left: 0;
+  transition: all 0.5s; }
+  #absordtop .container {
+    padding-top: 10px; }
+  #absordtop .search-bar {
+    margin-top: 5px; }
+
+.abslogo {
+  margin-left: 25px;
+  width: 320px;
+  height: 54px; }
+  .abslogo a {
+    display: inline;
+    height: 100%;
+    width: 100%; }
+  .abslogo img {
+    width: 122px;
+    height: 49px; }
+
+.allitem {
+  font-size: 14px; }
+  .allitem .aball {
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    list-style: 32px;
+    margin-top: 10px;
+    text-align: left;
+    position: relative;
+    text-align: center; }
+  .allitem .all-list {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    display: none;
+    position: absolute;
+    text-align: left;
+    width: 190px;
+    left: 0;
+    bottom: -423px; }
+    .allitem .all-list a {
+      color: #fff; }
+  .allitem .list-detail a {
+    color: #000; }
+
+.allitem:hover .aball {
+  background: #000;
+  color: #fff; }
+  .allitem:hover .aball .all-list {
+    display: block; }
+
+.lr {
+  padding-top: 7px; }
+  .lr a {
+    padding: 0 10px; }
+  .lr a:first-child {
+    border-right: 1px solid #ccc; }

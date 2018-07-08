@@ -29,7 +29,7 @@ require(['jquery','generate','http','banner'],function($,gen,http,banner){
         $('.arrowr')[0].style.display = 'block';
         let margin_status = Number(block.style.marginLeft.slice(0,-2));
         
-        $('.b-lists')[0].style.marginLeft = (margin_status + basemovel) + 'px';
+        block.style.marginLeft = (margin_status + basemovel) + 'px';
         margin_status = Number(block.style.marginLeft.slice(0,-2));
         if(margin_status <= -960){
             $('.arrowl')[0].style.display = 'none'
@@ -39,7 +39,7 @@ require(['jquery','generate','http','banner'],function($,gen,http,banner){
         $('.arrowl')[0].style.display = 'block';
         let margin_status = Number(block.style.marginLeft.slice(0,-2));
         
-        $('.b-lists')[0].style.marginLeft = (margin_status + basemover) + 'px';
+        block.style.marginLeft = (margin_status + basemover) + 'px';
         margin_status = Number(block.style.marginLeft.slice(0,-2));
         if(margin_status >= 0){
             $('.arrowr')[0].style.display = 'none'
@@ -47,6 +47,17 @@ require(['jquery','generate','http','banner'],function($,gen,http,banner){
     })
 
 
-
+    //吸顶菜单
+    let absordtop = $('#absordtop');
+    function scroll(){
+        if(window.scrollY >= 170){
+            absordtop.css({'top':'0'});
+        }else{
+            absordtop.css({'top':'-75px'})
+        }
+    }
+    scroll();
+    window.onscroll = scroll;
+    
     
 })

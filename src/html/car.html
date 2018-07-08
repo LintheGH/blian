@@ -127,8 +127,10 @@
                     </div>
                 </div>
                 <div class="list-top">
-                   <input type="checkbox" name="allselect" id="allselect">
-                   <span>全选</span>
+                        <label >
+                            <input type="checkbox" name="allselect" class="allselect" checked>
+                            <span>全选</span>
+                        </label>
                    <span>商品信息</span>
                    <span>单价</span>
                    <span>件数（元）</span>
@@ -144,7 +146,7 @@
                                 【官方授权】阿大多数发大水发士大夫撒地方撒地方噶
                             </span>
                         </div>
-                        <div class="li-price fl">￥748.65</div>
+                        <div class="li-price fl">￥748</div>
                         <div class="li-number fl">
                             <div class="isb" data-indexid="191">
                                 <span id="minus-btn"><a href="javascript:">-</a></span>
@@ -162,19 +164,21 @@
                     </li>
                 </ul>
                 <div class="list-bottom">
-                    <input type="checkbox" name="allselect" id="allselect">
-                    <span>全选</span>
-                    <span><a href="#"><i class="fa fa-trash-o"></i>删除</a></span>
-                    <span><a href="#">清除失效产品</a></span>
-                    <span><a href="#">移入收藏夹</a></span>
-                    <span class="selectednum"><a href="javascript:">已选择<i>3</i>件产品</a></span>
+                    <label >
+                        <input type="checkbox" name="allselect" class="allselect" checked>
+                        <span>全选</span>
+                    </label>
+                    <span><a href="#" class="dele"><i class="fa fa-trash-o"></i>删除</a></span>
+                    <span><a href="#" class="clear">清除失效产品</a></span>
+                    <span><a href="#"vclass="mtc">移入收藏夹</a></span>
                     <div class="showtotal fr clearfix">
-                        <button id="calculatetotal" class="fr">去结算</button>
+                        <a href="javascript:" id="calculatetotal" class="fr"> 去结算</a>
                         <div class="stprice fr">
                             <span class="fl">商品金额（不含运费）：￥<i id="totalprice">1256</i></span>
                             <span class="fl">价格优惠：-￥<i id="discount">0.00</i></span>
                         </div>
-                    </div>
+                    </div>                    
+                    <span class="selectednum fr"><a href="javascript:">已选择<i id="selectednum">3</i>件产品</a></span>
                 </div>
             </div>
         </div>

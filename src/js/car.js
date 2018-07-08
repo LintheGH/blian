@@ -29,11 +29,48 @@ require(['jquery','cookie','http','generate'],function($,cookie,http,gen){
                 let result = window.eval('(' + res + ')');
                 console.log(result);
                 gen.car_generate_list(result,ul,num);
+                selectedItem();
+                totalPrice();
             },function(err){
                 console.log(err)
             })
         }
 
+        //总选择商品数
+        function selectedItem(){
+            let counts = 0;
+            $('.list-main li').each(function(){
+                if(this.children[0].checked){
+                    counts += Number($(this).find('.isb-count').val());
+                }
+            });
+            $('#selectednum').text(counts);
+        }
+
+        //总价
+        function totalPrice(){
+            let sum = 0;
+            $('.list-main li').each(function(){
+                if(this.children[0].checked){
+                    console.log($(this).find('#li-totalp').text())
+                    sum += Number($(this).find('#li-totalp').text());
+                }
+            });
+            console.log(sum)
+            $('#totalprice').text(sum.toFixed(2));
+        }
+
+        //背景颜色
+        function backgroundColor(){
+            $('.list-main li').each(function(){
+                if(this.children[0].checked){
+                    this.style.backgroundColor = '#FFFAF1';
+                }else{
+                    this.style.backgroundColor = '#FCFCFC'
+                }
+            })
+        }
+        
 
         //事件
         $('.list-main').on({
@@ -54,6 +91,8 @@ require(['jquery','cookie','http','generate'],function($,cookie,http,gen){
                     $(evt.target).parent().next().val(num);
                     //更新金额
                     li.find('#li-totalp').text(`${Number(price)*num}`);
+                    selectedItem();
+                    totalPrice();
                     //更新cookie
                     let mcookie = cookie.read();
                     console.log(id,mcookie)
@@ -79,6 +118,8 @@ require(['jquery','cookie','http','generate'],function($,cookie,http,gen){
                     console.log(snum);
                     //更新金额
                     li.find('#li-totalp').text(`${Number(price)*num}`);
+                    selectedItem();
+                    totalPrice();
                     //更新cookie
                     let pcookie = cookie.read();
                     for(let key in pcookie){
@@ -94,6 +135,28 @@ require(['jquery','cookie','http','generate'],function($,cookie,http,gen){
                     delete delitem[delIndexid];
                     cookie.set(delitem);
                     $(evt.target).parent().parent().parent().remove();
+                    selectedItem();
+                    totalPrice();
+
+                }
+                if($(evt.target).prop('type') == 'checkbox'){
+                    let allcheckbox = $('.list-main').find('input:not(.isb-count)');
+                    let itemCounts = 0;
+                    let isChecked = true;
+                    let loop = 0;
+                    allcheckbox.each(function(){
+                        if(!this.checked){
+                            isChecked = false;
+                            this.parentNode.style.backgroundColor = '#FCFCFC';
+                        }else{
+                            this.parentNode.style.backgroundColor = '#FFFAF1';
+                        }
+                    });
+                    $('.allselect').each(function(){
+                        this.checked = isChecked;
+                    });
+                    selectedItem();
+                    totalPrice();
                 }
             },
             change:function(evt){
@@ -112,6 +175,8 @@ require(['jquery','cookie','http','generate'],function($,cookie,http,gen){
                     $(evt.target).val(num);
                     //更新金额
                     li.find('#li-totalp').text(`${Number(price)*num}`);
+                    selectedItem();
+                    totalPrice();
                     //更新cookie
                     let icookie = cookie.read();
                     for(let key in icookie){
@@ -123,6 +188,31 @@ require(['jquery','cookie','http','generate'],function($,cookie,http,gen){
                 }
             }    
             
+        });
+
+        $('.allselect').each(function(){
+            this.onclick = function(){
+                let isChecked = this.checked;
+                $('.list-main input:not(.isb-count)').each(function(){
+                    this.checked = isChecked;
+                });
+                $('.allselect').each(function(){
+                    this.checked = isChecked;
+                });
+                selectedItem();
+                totalPrice();
+                backgroundColor();
+            }
+        });
+
+        $('.list-bottom').on('click',function(evt){
+            if($(evt.target).hasClass('dele')){
+                $('.list-main').html('');
+                let obj = {};
+                cookie.set(obj);
+                selectedItem();
+                totalPrice();
+            }
         })
         
     })

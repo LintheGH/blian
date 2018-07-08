@@ -6,7 +6,7 @@
     $page = isset($_GET["page"]) ? $_GET["page"] : 1;
     $limit = isset($_GET["limit"]) ? $_GET["limit"] : 10;
     $order = isset($_GET["order"]) ? $_GET["order"] : '';
-
+    // echo "123"
     include 'DBHelper.php';
     $sql = 'select SQL_CALC_FOUND_ROWS * from products ';
     if($order){

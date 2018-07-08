@@ -170,33 +170,50 @@
         margin-left:15px;
     }
     .selectednum{
-        margin-left:200px;
+        margin-right:15px;
     }
 }
 .showtotal{
     height: 100%;
 }
 #calculatetotal{
-    overflow:hidden;
+    width: 100px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
     padding:0 20px;
     height: 100%;
     background: red;
     color:#fff;
 }
+#calculatetotal:hover {background: #B62222;}
 .stprice{
     height: 100%;
+    width: 300px;
     line-height: 25px;
+    text-align: left;
+    overflow: hidden;
     text-align: right;
+    margin-right: 10px;
     span{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-left:0;
         height: 25px;
         width: 100%;
-
+        i{display: inline;}
     }
 
 }
 #totalprice{
     color:red;
     font-weight:bold;
- 
+    
     font-size:22px;
+}
+#selectednum{
+    color:red;
+    display: inline;
 }
