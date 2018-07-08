@@ -300,6 +300,9 @@ ul.type-lists-b{
 .g-item-img{
     width: 218px;
     height: 220px;
+    
+    a{display:inline-block;width: 100%;height: 100%;}
+    img{width: 100%;height: 100%;}
 }
 .g-item-title{
     width: 218px;
@@ -410,3 +413,5 @@ ul.type-lists-b{
     }
     a:first-child{border-right:1px solid #ccc;}
 }
+
+

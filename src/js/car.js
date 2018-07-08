@@ -213,6 +213,42 @@ require(['jquery','cookie','http','generate'],function($,cookie,http,gen){
                 selectedItem();
                 totalPrice();
             }
+        });
+
+        //结算
+        $('#calculatetotal').click(function(){
+            let iteminfo = cookie.read();
+            console.log(iteminfo)
+            iteminfo = JSON.stringify(iteminfo);
+            if(iteminfo === '{}'){
+                alert('购物车快饿扁了 /(ToT)/~~尝试买些东西再回来看看，快去 i百联首页 挑选商品吧！');
+                window.location.href= '../index.html';
+                return;
+            }
+            http.post('car.php',{
+                iteminfo:iteminfo
+            }).then(function(res){
+                console.log(res);
+                let obj = window.eval('(' + res + ')');console.log(res);
+                if(obj.state){
+                    let html = `<div class="cover" style="width:100%;height:100%;position:fixed;left:0;top:0;background-color:rgba(200,200,200,.7);">
+                                    <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);">结算成功</div>
+                                </div>`;
+                    $(html).appendTo('body').show();
+                    setTimeout(function(){
+                        $('.cover').hide();
+                        let cok = {};//清空cookie保存的商品id
+                        cookie.set(cok);
+                        window.location.href = '../index.html';
+                    },2000)
+
+                }else{
+                    alert('结算出错');
+                    $('.cover').hide();
+                }
+            },function(err){
+                console.log(err);
+            })
         })
         
     })

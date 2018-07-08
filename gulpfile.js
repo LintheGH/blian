@@ -14,7 +14,7 @@ const htmlSrc = './src/html/*.html';
 const scssSrc = './src/sass/*.scss';
 
 const jsDist = './dist/js';
-const scssDist = './dist/sass';
+const scssDist = './src/css';
 const htmlDist = './dist/html';
 const imgDist = './dist/img';
 //定义 requirejs 任务

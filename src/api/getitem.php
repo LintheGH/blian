@@ -1,8 +1,9 @@
 <?php
-    include 'DBHelper.php';
     header('Access-Control-Allow-Origin:*');
     header('Access-Control-Allow-Methods:POST,GET,OPTIONS'); 
     header('Access-Control-Request-Headers:accept, content-type');
+    include 'DBHelper.php';
+    
 
     $indexid = isset($_GET['indexid']) ? $_GET['indexid'] : 0; 
     $sql = "select * from products where indexid = $indexid";

@@ -18,8 +18,11 @@ require(['jquery','http','heighlight','regtext'],function($,http,hl,reg){
         let msgcode = document.querySelector('#msgcode');
         let arr = [uname,upw,pwd2,phone,pic_randomcode,msgcode];
         let unamee = document.querySelector('.showerror2');
+        //高亮边框
         hl(arr,unamee);
+        
         $('#regist-btn').on('click',function(){
+           let Flag = pwd2.value === upw.value;
             for(let i=0;i<arr.length;i++){
                 let flag = reg(`${arr[i].name}`,arr[i]);
                 if(!arr[i].value || !flag){
@@ -39,6 +42,14 @@ require(['jquery','http','heighlight','regtext'],function($,http,hl,reg){
                     arr[i].parentNode.getElementsByClassName('showerror')[0].style.display = 'none';
                 }
             }
+            if(!Flag){
+                pwd2.parentNode.style.boxShadow = `0 0 3px red`;
+                pwd2.parentNode.getElementsByClassName('showinfo')[0].style.display = 'none';
+                pwd2.parentNode.getElementsByClassName('showerror')[0].style.display = 'inline-block';
+                return;
+            }
+            console.log($('#username').val())
+            //注册
             http.post('register.php',{
                 username:$('#username').val(),
                 pwd:$('#pwd').val(),phone:$('#phone').val()

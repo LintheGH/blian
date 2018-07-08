@@ -23,13 +23,22 @@ define(['jquery'],function($){
         },
         check:function(paramas){
             let cookie = document.cookie;
+            
             paramas = String(paramas)
             let result=null;
             if(!cookie){ //undefinded || other
                 return null;
             }else{
-                let arr = cookie.split('=')[1];
-                let dataset = JSON.parse(arr);
+                cke = cookie.split('; ');
+                let arr = [];
+                for(let i=0;i<cke.length;i++){
+                    arr = cke[i].split('=');
+                    if(arr[0] == 'data'){
+                        cookie = arr[1];
+                        break;
+                    }
+                }
+                let dataset = JSON.parse(cookie);
                 for(var key in dataset){
                     if(key == paramas){
                         return dataset[key];
@@ -43,8 +52,16 @@ define(['jquery'],function($){
             if(!cookie){//undefinded || other
                 return null;
             }else{
-                let arr = cookie.split('=')[1];
-                let dataset = JSON.parse(arr);
+                cke = cookie.split('; ');
+                let arr = [];
+                for(let i=0;i<cke.length;i++){
+                    arr = cke[i].split('=');
+                    if(arr[0] == 'data'){
+                        cookie = arr[1];
+                        break;
+                    }
+                }
+                let dataset = JSON.parse(cookie);
                 return dataset;
             } 
         }

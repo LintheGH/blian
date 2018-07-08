@@ -1,8 +1,9 @@
 <?php
+	header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Method:GET,POST');
+    header('Access-Control-Allow-Resquest-Headers:accpet,content-type');
 	include "DBHelper.php";
-	header('Access-Control-Allow-Origin:*');
-    header('Access-Control-Allow-Methods:POST,GET,OPTIONS'); 
-    header('Access-Control-Request-Headers:accept, content-type');
+	
 
 	// include "DBHelper.php";
 	// include "format.php";
@@ -24,9 +25,9 @@
 	if(count($dataset) < 1){
 		echo "{state: false, message: '登录失败！！！'}";
 	} else {
-		echo "{state: true, message: '登录成功！！！'}";
 		session_start();
-		$_SESSION["login_username"] = $username;		
+		$_SESSION["login_username"] = $username;
+		echo "{state: true, message: '登录成功！！！'}";	
 	}
 
 ?>
