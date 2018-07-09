@@ -6,7 +6,7 @@
 
 /*
     cookie形状：
-        data = {indexid:number}
+        data = {indexid:number} 
 */
 require.config({
     paths:{
@@ -23,22 +23,14 @@ define(['jquery'],function($){
         },
         check:function(paramas){
             let cookie = document.cookie;
-            
+            console.log(cookie);
             paramas = String(paramas)
             let result=null;
             if(!cookie){ //undefinded || other
                 return null;
             }else{
-                cke = cookie.split('; ');
-                let arr = [];
-                for(let i=0;i<cke.length;i++){
-                    arr = cke[i].split('=');
-                    if(arr[0] == 'data'){
-                        cookie = arr[1];
-                        break;
-                    }
-                }
-                let dataset = JSON.parse(cookie);
+                let arr = cookie.split('=')[1];
+                let dataset = JSON.parse(arr);
                 for(var key in dataset){
                     if(key == paramas){
                         return dataset[key];
@@ -49,19 +41,12 @@ define(['jquery'],function($){
         },
         read:function(){
             let cookie = document.cookie;
+            console.log(cookie)
             if(!cookie){//undefinded || other
                 return null;
             }else{
-                cke = cookie.split('; ');
-                let arr = [];
-                for(let i=0;i<cke.length;i++){
-                    arr = cke[i].split('=');
-                    if(arr[0] == 'data'){
-                        cookie = arr[1];
-                        break;
-                    }
-                }
-                let dataset = JSON.parse(cookie);
+                let arr = cookie.split('=')[1];
+                let dataset = JSON.parse(arr);
                 return dataset;
             } 
         }
