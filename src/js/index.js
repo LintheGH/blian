@@ -52,12 +52,28 @@ require(['jquery','generate','http','banner'],function($,gen,http,banner){
     function scroll(){
         if(window.scrollY >= 170){
             absordtop.css({'top':'0'});
+            $('#absordtotop').css({'display':'block'});
         }else{
-            absordtop.css({'top':'-75px'})
+            absordtop.css({'top':'-75px'});
+            $('#absordtotop').css({'display':'none'});
         }
     }
     scroll();
     window.onscroll = scroll;
     
+    //返回顶部
+    $('#absordtotop').on('click',function(){
+        let speed = 7;
+        let timer = setInterval(function(){
+            let toTop = window.scrollY;
+            let step = Math.ceil(toTop/speed);
+            window.scrollBy(0,-step);
+            
+            if(toTop <= 1){
+                clearInterval(timer);
+            }
+        },30);
+        
+    })
     
 })

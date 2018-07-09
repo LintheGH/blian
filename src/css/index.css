@@ -890,3 +890,21 @@ ul.type-lists-b {
     padding: 0 10px; }
   .lr a:first-child {
     border-right: 1px solid #ccc; }
+
+#absordtotop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #eee;
+  color: #aaa;
+  display: none; }
+  #absordtotop a {
+    display: inline-block;
+    width: 100%;
+    height: 100%; }

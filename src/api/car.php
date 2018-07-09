@@ -6,7 +6,9 @@
 
     session_start();
     $cookie = isset($_POST["iteminfo"]) ? $_POST["iteminfo"] : "{}";
-    
+    if(!isset($_SESSION["login_username"])){
+        die("{state:false,message:'请登录'}");
+    }
     $username = $_SESSION['login_username'];
     
     $sql = "insert into car (iteminfo,username) values('$cookie','$username')";
@@ -14,7 +16,7 @@
     if($data){
         echo"{state:true,message:'结算成功'}";
     }else{
-        echo"{state:false,mseeage:'结算失败'}";
+        echo"{state:false,message:'网络出错啦~~'}";
     }
 
 ?>

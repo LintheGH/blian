@@ -243,8 +243,9 @@ require(['jquery','cookie','http','generate'],function($,cookie,http,gen){
                     },2000)
 
                 }else{
-                    alert('结算出错');
+                    alert('请登录');
                     $('.cover').hide();
+                    window.location.href = './login.html';
                 }
             },function(err){
                 console.log(err);

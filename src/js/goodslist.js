@@ -3,18 +3,20 @@ require.config({
         'jquery':'../lib/jquery',
         'http':'./httpclient',
         'generate':'./datagrid',
-        'cookie':'./cookieOperate'
+        'cookie':'./cookieOperate',
+        'goodsort':'./goodssort'
     }
 })
 
 
 
-require(['jquery','http','generate','cookie'],function($,http,gen,cookie){
+require(['jquery','http','generate','cookie','goodsort'],function($,http,gen,cookie){
     var target = $('.main').find('.container')[0];
     console.log(target);
     $(function(){
         //加载第1页50个商品
         http.get('products.php',{limit:50,order:'indexid'}).then(function(res){
+            console.log(res)
             let result = window.eval('(' + res + ')')
             gen.generate_list(result,target);
         },function(err){

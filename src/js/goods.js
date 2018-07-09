@@ -17,6 +17,7 @@ require(['jquery','http','cookie','zoom'],function($,http,cookie){
         http.get('getitem.php',{
             indexid:indexid
         }).then(function(res){
+                    console.log(res)
                     let obj = window.eval('(' + res + ')')[0];
                     $('.ii-mainpic').find('img')[0].src = `${obj.picture}`;
                     $('.ii-mainpic').find('img')[0].setAttribute('data-big',`${obj.bigpicture}`)
@@ -147,8 +148,9 @@ require(['jquery','http','cookie','zoom'],function($,http,cookie){
 
         //输入框
         $('.isb-count').on('change',function(){
-            let num = $('.isb-count').val().replace(/\D/g,'');
-            let snum = Number($('#item-number').val());
+            let num = Number($('.isb-count').val().replace(/\D/g,''));
+            let snum = Number($('#item-number').text());
+            console.log(num,snum);
             if(num <= 1 ){
                 num = 1;
             }if(num >= snum){
